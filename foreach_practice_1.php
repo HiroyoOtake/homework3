@@ -33,22 +33,22 @@ body {
   <body>
     <h1>都道府県 選択</h1>
     <form action="" method="post">
-    <select>
-      <?php 
-        foreach ($prefectures as $number => $prefecture)
-        {
-         echo '<option value="' . $number . '">' . $prefecture . '</option>';
-        }
-       ?>
-    </select>
-     <p class="column">
-      <?php 
-        foreach ($prefectures as $number => $prefecture)
-        {
-         echo '<label><input type="checkbox" value="' . $number . '">' . $prefecture . '</label>';
-        }
-       ?>
-     </div>
+      <select>
+        <?php 
+          foreach ($prefectures as $number => $prefecture)
+          {
+            echo '<option value="' . $number . '">' . $prefecture . '</option>';
+          }
+         ?>
+      </select>
+      <p class="column">
+        <?php 
+          foreach ($prefectures as $number => $prefecture)
+          {
+            echo '<label><input type="checkbox" value="' . $number . '">' . $prefecture . '</label>';
+          }
+         ?>
+      </p>
     </form>
   </body>
 </html>
