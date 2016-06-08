@@ -19,9 +19,10 @@ $prefectures = array(
   <meta charset="utf-8" />
   <title>都道府県 選択</title>
   <style type="text/css">
-body {
+/*body {
   width: 500px;
   }
+*/
 
 .column label {
   display: block;
@@ -45,7 +46,11 @@ body {
         <?php 
           foreach ($prefectures as $number => $prefecture)
           {
+           if ($number % 5 == 0) {
+            echo '<label><input type="checkbox" value="' . $number . '">' . $prefecture . '</label><br>';
+            } else {
             echo '<label><input type="checkbox" value="' . $number . '">' . $prefecture . '</label>';
+            }  
           }
          ?>
       </p>
