@@ -46,12 +46,11 @@ $prefectures = array(
         <?php 
           foreach ($prefectures as $number => $prefecture)
           {
-           if ($number % 5 == 0) {
-            echo '<label><input type="checkbox" value="' . $number . '">' . $prefecture . '</label><br>';
-            } else {
             echo '<label><input type="checkbox" value="' . $number . '">' . $prefecture . '</label>';
-            }  
-          }
+              if ($number % 5 == 0) {
+                echo '<br>';
+               }
+          } 
          ?>
       </p>
     </form>
